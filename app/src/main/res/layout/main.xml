@@ -1,35 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
 
-    <Button
-        android:id="@+id/buttonImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="选图" />
-    <Button
-        android:id="@+id/buttonDetect"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="识别-cpu" />
-    <Button
-        android:id="@+id/buttonDetectGPU"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="识别-gpu" />
-    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="550dp">
+        <androidx.camera.view.PreviewView
+            android:id="@+id/img"
+            android:layout_width="match_parent"
+            android:layout_height="550dp"
+            android:background="#000000"
+            />
+        <ImageView
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_weight="1" />
+            android:id="@+id/frontlayer1"
 
+            android:layout_width="match_parent"
+            android:layout_height="550dp"
+
+            tools:ignore="MissingClass" />
+
+        <view
+
+            android:id="@+id/frontlayer"
+
+            class="com.tencent.mobilenetssdncnn.MyView"
+            android:layout_width="match_parent"
+
+            android:layout_height="550dp"
+            tools:ignore="MissingClass" />
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/circle_btn"
+        android:layout_marginLeft="180dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@mipmap/camera"
+        android:scaleType="centerCrop"
+        android:background="#000000"/>
 </LinearLayout>
