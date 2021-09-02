@@ -7,4 +7,6 @@
 ![image](https://user-images.githubusercontent.com/64718289/131598056-7121b038-9326-4dbe-bd4d-29d18147302a.png)
 如果不能翻墙，下载ndk压缩文件解压，并将ndk添加到系统环境变量中、下载安装Cmake，cmake版本与Gardle Scripts下Module的build.gradle对应最后在Gradle Scripts下的local.properities添加SDK、ndk、cmake路径（如果是通过Android Studio下载的ndk和sdk,不用添加ndk和sdk路径）
 ![image](https://user-images.githubusercontent.com/64718289/131598978-975b5585-8cc8-44bd-9a79-123f5ffc85bb.png)
+安装下载VulkanSDK，官网下载相应版本，安装安装完成后需要配置环境变量。在此电脑=>高级系统设置=>环境变量的系统变量部分的Path添加V u l k a n {\rm Vulkan}Vulkan的b i n {\rm bin}bin目录。使用命令行窗口测试是否安装成功：
+![image](https://user-images.githubusercontent.com/64718289/131767086-c4592c90-2a82-43d8-963b-c7921e3afe6f.png)
 
